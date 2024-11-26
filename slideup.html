@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>녹색 상자 마우스 엔터 시 펼쳐지기</title>
+  <style>
+    /* 전체 화면 크기 1000px x 1000px */
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: lightgray;
+    }
+
+    .container {
+      width: 1000px;
+      height: 1000px;
+      padding-top: 100px;
+    }
+
+    /* 파란 박스 스타일 */
+    .blueBox {
+      width: 300px;
+      height: 300px;
+      background-color: blue;
+      margin-bottom: 20px;
+    }
+
+    /* 녹색 박스 초기 스타일 (300px 높이) */
+    .greenBox {
+      width: 300px;
+      height: 300px; /* 초기 높이 */
+      background-color: green;
+      margin-top: 20px;
+      overflow: hidden; /* 내용이 박스를 넘어갈 때 숨기기 */
+      position: relative; /* 위치 설정을 위해 필요 */
+      transition: height 0.5s ease, transform 0.5s ease; /* 높이와 슬라이드 애니메이션 */
+    }
+
+    /* 'open' 클래스가 추가되면 녹색 박스가 위로 슬라이드 업하며 높이가 증가 */
+    .greenBox.open {
+      height: 450px; /* 높이 증가 */
+      transform: translateY(-150px); /* 150px만큼 위로 슬라이드 */
+    }
+
+    /* 마우스 오버 박스 스타일 */
+    .blueBox, .greenBox {
+      cursor: pointer; /* 클릭 가능한 영역처럼 커서 모양 변경 */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- 파란 박스 -->
+    <div class="blueBox"></div>
+
+    <!-- 녹색 박스 -->
+    <div class="greenBox"></div>
+  </div>
+
+  <script>
+    // 마우스가 녹색 상자 위로 올라갔을 때 'open' 클래스를 추가하여 슬라이드 업 및 높이 증가
+    document.querySelector('.greenBox').addEventListener('mouseenter', function() {
+      var greenBox = document.querySelector('.greenBox');
+      greenBox.classList.add('open'); // 'open' 클래스를 추가하여 녹색 박스를 펼치고 슬라이드 업
+    });
+
+    // 마우스가 녹색 상자에서 벗어났을 때 'open' 클래스를 제거하여 원래 상태로 복원
+    document.querySelector('.greenBox').addEventListener('mouseleave', function() {
+      var greenBox = document.querySelector('.greenBox');
+      greenBox.classList.remove('open'); // 'open' 클래스를 제거하여 원래 상태로 복원
+    });
+  </script>
+
+</body>
+</html>
