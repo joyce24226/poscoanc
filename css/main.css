@@ -1,0 +1,1079 @@
+@charset "utf-8";
+
+/************* main-visual *************/
+
+#main-visual {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/Mobile/m_main_visual_img.jpg) no-repeat center / cover;
+}
+
+#main-visual video {
+    display: none;
+}
+
+#main-visual .mv-text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#main-visual .mv-text h3 {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: -2px;
+}
+
+#main-visual .mv-text p {
+    display: none;
+    line-height: 1.5;
+}
+
+
+/* Tablet */
+
+@media screen and (min-width:768px) {
+
+    #main-visual .mv-text h3 {
+        font-size: 4rem;
+        font-weight: 500;
+        letter-spacing: -1px;
+    }
+
+    #main-visual .mv-text p {
+        display: none;
+        font-size: 1.6rem;
+        color: #fff;
+        text-align: center;
+    }
+
+    #main-visual .mv-text h3 span br {
+        display: none;
+    }
+
+}
+
+/* DeskTop */
+@media screen and (min-width:1200px) {
+
+
+    #main-visual {
+        width: 100%;
+        position: relative;
+        z-index: -1;
+    }
+
+    #main-visual video {
+        width: 100%;
+        height: 100vh;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+
+    #main-visual .mv-text h3 {
+        font-size: 6rem;
+        margin-bottom: 40px;
+    }
+
+    #main-visual .mv-text p {
+        display: block;
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+
+}
+
+/************* fullpage공통 *************/
+
+
+.fullpage .section h4 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.fullpage .section p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.more {
+    margin: 30PX auto 0;
+    display: block;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    object-fit: contain;
+    background-color: #8DDE5D;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    transition: all 0.5s;
+}
+
+
+.more:hover {
+    background-color: #00588A;
+}
+.more:hover p{
+    color: #fff;
+}
+
+
+
+/* Tablet */
+@media screen and (min-width:768px) {
+
+
+    .fullpage .section h4 {
+        font-size: 4rem;
+    }
+
+}
+
+/* Desktop */
+@media screen and (min-width:1200px) {
+
+    .fullpage .section h4 {
+        font-size: 5rem;
+        margin: 20px 0;
+    }
+
+    .fullpage .section h4+p {
+        font-size: 1.9rem;
+        margin-bottom: 30px;
+    }
+
+}
+
+
+
+
+/************* business *************/
+
+/* Moblie */
+#business h4 {
+    padding-top: 120px;
+}
+
+#business ul {
+
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+#business ul li {
+    width: calc((100% - 40px) / 2);
+    /* height: 100px; */
+    position: relative;
+    overflow: hidden;
+}
+
+#business ul li:nth-child(1),
+#business ul li:nth-child(2),
+#business ul li:nth-child(3) {
+    margin-bottom: 20px;
+
+}
+#business ul li:nth-child(4){
+    height: 90%;
+}
+#business ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#business ul li .business-img {
+    /* width: 150px;
+    height: 100px; */
+    overflow: hidden;
+}
+
+#business ul li .business-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#business ul li:last-child {
+    display: none;
+}
+
+#business ul li a .business-txt {
+    display: none;
+}
+
+#business ul li a:hover .business-txt {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+
+}
+
+#business ul li:hover a .business-txt h5 {
+    margin-top: 30%;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+#business ul li:hover a .business-txt h5+p {
+    font-size: 1.4rem;
+    font-weight: 400px;
+}
+
+
+
+/* Tablet */
+@media screen and (min-width:768px) {
+
+
+    #business ul li:nth-child(1),
+    #business ul li:nth-child(2),
+    #business ul li:nth-child(3) {
+        margin-bottom: 40px;
+
+    }
+
+
+    #business ul li:hover a .business-txt h5 {
+        margin-top: 30%;
+        margin-bottom: 10px;
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+
+    #business ul li:hover a .business-txt h5+p {
+        font-size: 1.6rem;
+    }
+
+}
+
+/* DeskTop */
+@media screen and (min-width:1200px) {
+
+    #business .inner ul {
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    #business ul li:last-child {
+        display: block;
+    }
+
+    #business ul li {
+        width: calc((66% - 80px) / 4);
+        height: 500px;
+        overflow: hidden;
+        transition: all 0.5s;
+    }
+
+    #business ul li.active {
+        width: 33%;
+    }
+
+    #business ul li a {
+        display: block;
+        position: relative;
+    }
+
+    #business ul li a .business-img {
+        width: 100%;
+        height: 400px;
+    }
+
+    #business ul li a img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+
+    #business ul li.active a .business-txt {
+        width: 100%;
+        position: absolute;
+        top: 400px;
+        left: 0;
+        height: 100px;
+        background-color: #00588A;
+    }
+
+    #business ul li.active a {
+        display: block;
+    }
+
+    #business ul li.active a .business-txt h5 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 5px 10px;
+        position: relative;
+        text-align: left;
+
+    }
+
+    #business ul li.active a .business-txt h5::before {
+        content: "";
+        display: block;
+        width: 48px;
+        height: 2px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #8DDE5D;
+    }
+
+    #business ul li.active a .business-txt p {
+        margin: 5px 10px;
+        text-align: left;
+    }
+
+
+}
+
+/************* service *************/
+
+/* Mobile */
+
+
+#service .main-tit {
+    padding-top: 120px;
+ }
+
+.service ul {
+    display: flex;
+}
+
+.service ul li {
+    width: 200px;
+    height: 300px;
+    background-size: contain;
+    background-position: center;
+    transition: background-size .3s ease;
+    -moz-transition: background-size .3s ease;
+    -web-kit-transition: background-size .3s ease;
+    transition: transform 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.service ul li:nth-child(1) {
+    background: url(../img/Desktop/service.jpg) no-repeat center;
+}
+
+.service ul li:nth-child(2) {
+    background: url(../img/Desktop/service2.png) no-repeat center;
+}
+
+.service ul li:nth-child(3) {
+    background: url(../img/Desktop/service3.jpg) no-repeat center;
+}
+
+.service ul li:nth-child(4) {
+    background: url(../img/Desktop/service.jpg) no-repeat center;
+}
+
+.service ul li:nth-child(5) {
+    background: url(../img/Desktop/service2.png) no-repeat center;
+}
+
+.service ul li:hover {
+    transform: scale(1.1);
+}
+
+.service ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.service ul li a p {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    text-shadow: 0 0 3px #00588A;
+}
+
+/* Tablet */
+@media screen and (min-width:768px) {
+
+
+    #service .main-tit {
+       padding-top: 505px;
+    }
+
+
+    .service ul li {
+        width: 450px;
+        height: 500px;
+    }
+
+    .service ul li a p {
+        font-size: 30px;
+    }
+
+}
+
+
+/* DeskTop */
+@media screen and (min-width:1200px) {
+    #service .main-tit {
+        padding-top: 0;
+    }
+    #service h4 {
+        padding-top: 120px;
+    }
+
+    .service ul li {
+        width: 500px;
+        height: 600px;
+    }
+
+    .service ul li a p {
+        font-size: 40px;
+    }
+
+    .service ul li a p span {
+        font-size: 30px;
+    }
+}
+
+/************* modular *************/
+
+/* Mobile */
+
+#modular .main-tit {
+    margin-top: -390px;
+    padding-top: 120px;
+ }
+
+
+#modular .modular-img {
+    margin: 0 auto;
+}
+
+#modular .modular-img img {
+    width: 100%;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+}
+
+#modular .recruit {
+    width: 100%;
+    height: 150px;
+    background: url(../img/Mobile/m_recruit.jpg) no-repeat center / 100%;
+    padding-top: 20px;
+    text-align: left;
+    padding-left: 10%;
+    position: relative;
+}
+
+#modular .recruit h6 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#modular .recruit p {
+    text-align: left;
+    color: #fff;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 18%
+}
+
+#modular .recruit a {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10%;
+    width: 100px;
+    height: 30px;
+    background-color: #8DDE5D;
+    display: flex;
+    gap: 5px;
+    transition: all 0.5s;
+}
+
+#modular .recruit a:hover {
+    gap: 10px;
+    background-color: #fff;
+
+}
+
+#modular .recruit a>p {
+    color: #222;
+    font-weight: 500;
+    line-height: 40px;
+    font-size: 1.2rem;
+    padding-left: 10px;
+
+}
+
+#modular .recruit {
+    margin-top: 20px;
+
+}
+#modular .recruit a{
+    top: 30%;
+}
+
+
+#modular .recruit a img {
+    display: inline-block;
+    width: 6px;
+    height: 9px;
+    object-fit: cover;
+    margin-top: 15px;
+}
+#modular .recruit .more p span{
+    display: none;
+}
+#modular .recruit .more p {
+top: -5px;
+padding-left: 7px;
+}
+
+/* Tablet */
+@media screen and (min-width:768px) {
+
+
+    #modular .main-tit {
+        padding-top: 200px;
+        margin-top: 0;
+     }
+
+    #modular .modular-img {
+        position: relative;
+    }
+
+    #modular .recruit {
+        margin-top: 30px;
+
+    }
+
+    #modular .recruit h6 {
+        font-size: 2.5rem;
+        padding-left: 5%;
+
+    }
+
+    #modular .recruit p {
+        font-size: 1.6rem;
+        padding-left: 20%;
+    }
+
+
+    #modular .recruit a {
+        width: 150px;
+        height: 40px;
+        background-color: #8DDE5D;
+        display: flex;
+        gap: 5px;
+        transition: all 0.5s;
+    }
+
+    #modular .recruit a:hover {
+        gap: 10px;
+        background-color: #fff;
+
+    }
+
+    #modular .recruit a>p {
+        color: #222;
+        font-size: 1.4rem;
+        padding-left: 0;
+        line-height: 1.35;
+    }
+
+    #modular .recruit a img {
+        width: 9px;
+        height: 12px;
+        margin-top: 15px;
+        text-align: right;
+    }
+
+    #modular .recruit .more p span{
+        display: block;
+     
+    }
+
+}
+
+
+
+
+
+/* DeskTop */
+@media screen and (min-width:1200px) {
+
+
+    #modular .main-tit {
+        padding-top: 0;
+        margin-top: 0px;
+
+     }
+    #modular h4 {
+        padding-top: 120px;
+    }
+
+    #modular .modular-img {
+        width: 1200px;
+        height: 340px;
+        margin: 0 auto;
+    }
+
+    #modular .modular-img img {
+        width: 100%;
+    }
+
+    #modular .recruit {
+        margin-top: 50px;
+        height: 300px;
+        background: url(../img/Desktop/recruit.jpg) no-repeat center / 100%;
+
+    }
+
+    #modular .recruit h6 {
+        font-size: 6rem;
+        padding-left: 5%;
+
+    }
+
+    #modular .recruit p {
+        font-size: 2.5rem;
+        padding-left: 25%;
+    }
+
+}
+
+/************* esg *************/
+
+/* Mobile */
+
+#esg .inside {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: -496px;
+}
+
+#esg video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#esg .esg-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+
+}
+
+#esg .esg-txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+
+}
+
+#esg .esg-txt h4 {
+    padding-top: 0;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+#esg .esg-txt p {
+    font-weight: 400px;
+    font-size: 1.4rem;
+}
+
+#esg .esg-txt .kr-txt {
+    margin-bottom: 10px;
+}
+
+#esg .esg-txt h4 span,
+#esg .esg-txt h4+p,
+#esg .esg-txt .kr-txt3 {
+    display: none;
+
+}
+#esg .esg-txt .more{
+    margin-left: 0;
+}
+
+/* Tablet */
+@media screen and (min-width:768px) {
+
+    
+#esg .inside{
+    margin-top: -189px;
+}
+
+    .fullpage #esg h4 {
+        text-align: left;
+    }
+
+    .fullpage #esg p {
+        text-align: left;
+    }
+
+    #esg .esg-txt {
+        left: 30%;
+    }
+
+    #esg .esg-txt h4 {
+        font-size: 4rem;
+    }
+
+    #esg .esg-txt h4 span {
+        font-size: 2.5rem;
+        display: inline-block;
+
+    }
+
+    #esg .esg-txt p {
+        font-size: 1.6rem;
+    }
+
+    #esg .esg-txt .kr-txt,
+    #esg .esg-txt .kr-txt2 {
+        display: none;
+    }
+
+    #esg .esg-txt h4+p,
+    #esg .esg-txt .kr-txt3 {
+        display: block;
+    }
+
+}
+
+
+
+
+/* DeskTop */
+@media screen and (min-width:1200px) {
+
+    #esg .inside{
+        margin-top: 0px;
+    }
+    #esg video {
+        object-fit: cover;
+    }
+
+    #esg .esg-txt h4 {
+        font-size: 5rem;
+    }
+
+    #esg .esg-txt h4 span {
+        font-size: 3rem;
+    }
+
+    #esg .esg-txt p {
+        font-size: 1.8rem;
+    }
+}
+
+/************* notice *************/
+
+/* Mobile */
+
+#notice .notice {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+ #notice .main-tit {
+    margin-top: 100px;
+}
+
+#notice .notice .notice-img{
+    overflow: hidden;
+}
+#notice .notice img {
+    width: 100%;
+    transition: all 0.5s;
+}
+#notice .notice li:hover img {
+    display: block;
+    transform: scale(1.2);
+
+}
+
+#notice .notice .notice-txt {
+    height: 50px;
+    width: 100%;
+    background-color: #00588A;
+    text-align: center;
+}
+
+
+#notice .notice .notice-txt a {
+    display: block;
+    color: #fff;
+    line-height: 50px;
+}
+
+#notice .notice .notice-txt {
+    margin-bottom: 10px;
+}
+
+#notice .notice .notice-txt dl dt span,
+#notice .notice-txt dl dd {
+    display: none;
+}
+
+/* Tablet */
+@media screen and (min-width:768px) {
+    #fullpage #notice .main-tit {
+        padding-top: 100px;
+    }
+    #notice .main-tit {
+        padding-top: 120px;
+     }
+
+    #notice .notice {
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #notice .notice li {
+        width: calc((100% - 25px) / 2);
+        height: 600px;
+    }
+
+    #notice .notice li:nth-child(1),
+    #notice .notice li:nth-child(2) {
+        margin-bottom: 50px;
+    }
+
+    #notice .notice .notice-img {
+        width: 100%;
+
+    }
+
+
+    #notice .notice .notice-txt {
+        height: calc(100% / 2);
+        text-align: left;
+        padding: 50px 30px 0;
+        transition: height 0.5s ease, transform 0.5s ease;
+        position: relative;
+    }
+
+    #notice .notice .notice-txt.open {
+        height: 400px;
+        transform: translateY(-100px);
+    }
+
+    #notice .notice .notice-txt a {
+        line-height: 1.35;
+    }
+
+    #notice .notice .notice-txt dl {
+        position: relative;
+    }
+
+    #notice .notice .notice-txt dl dt {
+        font-size: 1.9rem;
+        font-weight: 500;
+        letter-spacing: -1;
+        line-height: 1.5;
+    }
+
+    #notice .notice-txt dl dd:first-child {
+        display: none;
+    }
+
+    #notice .notice .notice-txt:hover dl dd:first-child {
+        display: block;
+    }
+
+    #notice .notice .notice-txt dl dt .tb-line {
+        display: block;
+    }
+
+    #notice .notice .notice-txt dl dt span {
+        display: inline-block;
+    }
+
+    #notice .notice-txt dl .notice-date {
+        display: block;
+        position: absolute;
+        top: 180px;
+        left: 0;
+    }
+
+    #notice .notice-txt.open dl dd {
+        display: block;
+        margin-top: 30px;
+    }
+
+    #notice .notice-txt.open dl .notice-date {
+        top: 240px;
+    }
+
+}
+
+
+
+
+/* DeskTop */
+@media screen and (min-width:1200px) {
+    #notice .main-tit {
+        padding-top: 0px;
+    }
+    #notice h4 {
+        padding-top: 120px;
+    }
+
+    #notice .notice li {
+        width: calc((100% - 300px) / 4);
+    }
+
+
+
+}
+
+/************* business *************/
+
+/* Mobile */
+
+#contact{
+    display: none;
+}
+
+/* Tablet */
+@media screen and (min-width:768px) {
+ 
+    #contact{
+        display: block;
+    }
+    #contact h4{
+        padding-top: 677px;
+    }
+
+    #contact table tr th {
+        width: 150px;
+        text-align: center;
+        border-right: 1px solid #999;
+    }
+
+    #contact table tr .first {
+        border-top: 3px solid #00588A;
+        padding-top: 5px;
+    }
+
+    #contact table tr .first select {
+        width: 150px;
+        height: 35px;
+        border:1px solid #999;
+    }
+
+    #contact table tr .first select option {
+        padding: 3px 0;
+    }
+
+    #contact table tr .last {
+        border-bottom: 3px solid #00588A;
+
+
+    }
+
+    #contact table tr th,
+    #contact table tr td {
+        border-top: 1px solid #999;
+        height: 60px;
+    }
+
+    #contact table tr td {
+        padding-left: 20px;
+    }
+
+    #contact table tr td input {
+        border: 1px solid #999;
+        height: 40px;
+    }
+
+    #contact table tr td span {
+        display: inline-block;
+        padding-top: 10px;
+    }
+
+    #contact table tr td textarea {
+        width: 500px;
+        height: 200px;
+        border-bottom: 1px solid #999;
+        display: inline-block;
+        margin: 20px 0;
+        border-top: 1px solid #999;
+
+    }
+
+    #contact .agree {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    #contact .agree input[type=checkbox] {
+        display: inline-block;
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+
+    #contact .agree span {
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    #contact .agree .all {
+        text-decoration: underline;
+    }
+}
+
+
+
+
+
+/* DeskTop */
+@media screen and (min-width:1200px) {
+    #contact h4 {
+        padding-top: 120px;
+    }
+}
